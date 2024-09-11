@@ -4,7 +4,7 @@
 
 ### Background
 The client is a used car dealership, with an interest in better understanding what is important to a buyer, in order to better inform pricing and promotion.
-The Jupyter notebook used for this analysis can be found as 
+The Jupyter notebook used for this analysis can be found at https://github.com/johnprg/UsedCarData/UsedCarData.ipynb .
 
 ### The Dataset
 The original dataset from Kaggle contained information on 3 million used cars. The provided dataset contains information on 426K cars to ensure speed of processing.  We seek to understand what factors make a car more or less expensive.
