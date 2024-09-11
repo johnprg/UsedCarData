@@ -80,3 +80,22 @@ lasso_scaled_best (alpha=100)          $4893.79                    29.69%
 ridge_grid (alpha=1151.3953993264481)  $4892.35                    29.69%
 </pre>
 
+The winning model (Sequential Feature Selection with Polynomial Degree 2 and 6 chosen features) showed the following predictive performance for the test data which was not part of the training set.
+![Sequential Feature Selector: Degree 2, 6 Features_predictions](https://github.com/user-attachments/assets/12da90b0-cee7-434a-9c0b-1b6539d7b120)
+
+However, this model seems to overweight the year parameter, including it as part of six selected features.  For that reason, we selected the Lasso model with Alpha value 10, which weights the parameters and ends up including 10 parameters in the resulting model according to the coefficients below.
+
+![Lasso Regression with Standard Scaler (alpha=10)_coefs](https://github.com/user-attachments/assets/dfb12e0e-53d2-43e3-a560-3977a8e6b953)
+
+This means that the pricing model takes into account the factors that we know consumers consider, with strong correlation on year, type of car, odometer reading, and location of sale.  In spite of the slightly higher error on the test data, we suspect that this model is a better predictor of consumer preferences.
+
+### Recommendations
+
+1. The resulting model can be used to price newly acquired cars for sale.
+2. Further work could be done to develop separate pricing models for each of the Vintage and Outliers markets.
+3. Further analysis could be done on a specific market location to refine the pricing specifically for that location, though this is a factor in the chosen model.
+
+
+
+
+
