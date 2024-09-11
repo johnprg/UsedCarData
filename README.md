@@ -63,5 +63,20 @@ Looking at the price by manufacturer and model year, we noticed that the data se
 
 ![price_by_manufacturer_lineCore after 1980](https://github.com/user-attachments/assets/0a6a71ac-7e5f-494c-9681-bf275c8c52da)
 
+### Pricing Models
 
+Several models were evaluated, and compared using mean absolute error as the primary criterion.  We chose this because it really focuses on pricing accuracy and is easy to understand.  The results for the models are shown below (you do not need to understand the model names, just focus on the resulting prediction accuracy).
+
+<pre>
+Average Car Price: $ 16480.33
+                                       mean average                mean average
+                                       error ($)                   error (%)
+sequential(degree=2, n_features=6)     $4594.66                    27.88%
+linear_scaled                          $4884.45                    29.64%
+ridge_scaled (alpha=1.0)               $4884.45                    29.64%
+ridge_scaled_best (alpha=100)          $4884.78                    29.64%
+lasso_scaled (alpha=10)                $4884.85                    29.64%
+lasso_scaled_best (alpha=100)          $4893.79                    29.69%
+ridge_grid (alpha=1151.3953993264481)  $4892.35                    29.69%
+</pre>
 
